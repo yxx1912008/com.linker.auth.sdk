@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"com.linker.auth.sdk/internal/model"
-	tools "com.linker.auth.sdk/internal/utils"
-	auth_model "com.linker.auth.sdk/pkg/model"
+	"github.com/yxx1912008/com.linker.auth.sdk/internal/model"
+	tools "github.com/yxx1912008/com.linker.auth.sdk/internal/utils"
+	auth_model "github.com/yxx1912008/com.linker.auth.sdk/pkg/model"
 )
 
 // AuthSDK 授权SDK的主结构体
@@ -50,7 +50,7 @@ func NewAuthConfigs() *AuthConfigs {
 // NewAuthSDK 创建一个新的授权SDK实例
 func NewAuthSDK(config *AuthConfigs) (*AuthSDK, error) {
 
-	if !config.Enable  {
+	if !config.Enable {
 		return nil, fmt.Errorf("auth is not enabled")
 	}
 
